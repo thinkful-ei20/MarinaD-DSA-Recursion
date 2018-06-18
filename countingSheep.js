@@ -13,6 +13,15 @@ const countingSheep = (num) => {
   return countingSheep(num-1);
 };
 
-countingSheep(3);
+// countingSheep(3);
 
 //Iterative Version
+
+const countingSheepIter = num => {
+
+  for (let i = num; i > 0; i--){
+    console.log(`${i} - Another sheep jumps over the fence`);
+  }
+};
+
+countingSheepIter(3);
