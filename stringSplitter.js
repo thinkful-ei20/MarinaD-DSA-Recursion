@@ -9,13 +9,15 @@ const stringSplitter = (str, seperator) =>{
   const sepIndex = str.indexOf(seperator);
   if (sepIndex === -1){ return [str]; }
   
-  return [str.slice(0,sepIndex), ...stringSplitter(str.slice(sepIndex+1), seperator)];
+  return [str.slice(0,sepIndex), 
+    ...stringSplitter(str.slice(sepIndex+1), seperator)];
 };
 
 console.log(stringSplitter('My friend', ' '));
 
+//Iterative Version
 const stringSplitterIter = (str, seperator) => {
-  let result = [];
+  const result = [];
   let subStr = '';
 
   for (let i = 0; i < str.length; i++){
