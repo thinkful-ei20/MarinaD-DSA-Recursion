@@ -13,7 +13,7 @@ const countingSheep = (num) => {
   return countingSheep(num-1);
 };
 
-// countingSheep(3);
+countingSheep(3);
 
 //Iterative Version
 
